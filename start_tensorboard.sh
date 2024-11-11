@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/sh
 tensorboard --logdir=logs/
