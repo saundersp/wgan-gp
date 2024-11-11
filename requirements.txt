@@ -1,0 +1,6 @@
+tensorflow==2.18.0
+matplotlib==3.9.2
+tensorrt==10.6.0
+keras==3.6.0
+
+#pudb==2024.1.3
