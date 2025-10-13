@@ -1,0 +1,19 @@
+services:
+  wgangp:
+    image: saundersp/wgangp
+    pull_policy: never
+    build:
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    volumes:
+      - ./logs:/home/wgangp/logs
+      - ./datasets:/home/wgangp/datasets
+      - ./checkpoints:/home/wgangp/checkpoints
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
