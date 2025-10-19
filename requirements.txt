@@ -3,4 +3,4 @@ matplotlib==3.10.7
 tensorrt==10.13.3.9
 keras==3.11.3
 
-#pudb==2025.1
+#pudb==2025.1.2
