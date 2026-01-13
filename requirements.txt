@@ -1,6 +1,6 @@
 tensorflow[and-cuda]==2.20.0
-matplotlib==3.10.7
-tensorrt==10.13.3.9
-keras==3.11.3
+matplotlib==3.10.8
+tensorrt==10.14.1.48.post1
+keras==3.13.0
 
-#pudb==2025.1.2
+#pudb==2025.1.5
