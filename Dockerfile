@@ -1,4 +1,4 @@
-FROM debian:13.1-slim
+FROM debian:13.2-slim
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends python3.13-venv=3.13.5-2 \
@@ -18,7 +18,7 @@ USER wgangp
 WORKDIR /home/wgangp
 
 COPY requirements.txt .
-RUN python -m venv venv && venv/bin/pip install --no-cache-dir --disable-pip-version-check --timeout 60 --retries 9999999999999999 -r requirements.txt \
+RUN python -m venv --upgrade-deps venv && venv/bin/pip install --no-cache-dir --disable-pip-version-check --timeout 60 --retries 9999999999999999 -r requirements.txt \
 	&& rm requirements.txt
 
 COPY *.py .
